@@ -9,14 +9,14 @@ int main()
     int i=0;
     for(i=0;i<=99;i++){
         printf("Enter the details of people %d:\n",i+1);
-        printf("Enter the name:\n");
+        printf("\nEnter the name:\n");
         fgets(p[i].name,20,stdin);
         fflush(stdin);
         printf("Enter the address:\n");
         fgets(p[i].address,20,stdin);
         fflush(stdin);
         printf("Enter the age:\n");
-        scanf("%d",p[i].age);
+        scanf("%d",&p[i].age);
         
         }
     for(i=0;i<=99;i++){
