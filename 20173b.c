@@ -3,12 +3,13 @@ struct people{
     char name[20];
     int age;
     char address [30];
+    long int ph;
 }p[100];
 int main()
 {
     int i=0;
     for(i=0;i<=99;i++){
-        printf("Enter the details of people %d:\n",i+1);
+        printf("Enter the details of people %d:\n\n",i+1);
         printf("\nEnter the name:\n");
         fgets(p[i].name,20,stdin);
         fflush(stdin);
@@ -17,6 +18,10 @@ int main()
         fflush(stdin);
         printf("Enter the age:\n");
         scanf("%d",&p[i].age);
+        fflush(stdin);
+        printf("Enter the phone number:\n\n");
+        scanf("%ld",&p[i].ph);
+        fflush(stdin);
         
         }
     for(i=0;i<=99;i++){
