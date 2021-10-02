@@ -1,3 +1,4 @@
+/*
 #include<stdio.h>
 int main()
 {
@@ -20,4 +21,34 @@ int main()
     return 0;
 
 
+}
+*/
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int num,temp,rem,n=0;
+    float result;
+    printf("Enter an integer:");
+    scanf("%d",&num);
+    temp=num;
+    for(temp=num;temp!=0;n++)
+    {
+        temp=temp/10;
+    }
+    for(temp=num;temp!=0;temp=10)
+    {
+        rem=temp%10;
+        result=result+pow(rem,n);
+    }
+    if((int)result==num)
+    {
+        printf("%d is an Armstrong number\n",num);
+    }
+    else
+    {
+        printf("%d is not an Armstrong number",num);
+    }
+    return 0;
 }
