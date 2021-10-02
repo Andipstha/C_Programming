@@ -23,7 +23,7 @@ int main()
     fwrite(stud1,sizeof(stud1),1,fptr);
     fclose(fptr);
 
-    fprt = fopen("program_5.txt","rb");
+    fptr = fopen("program_5.txt","rb");
     fread(stud2,sizeof(stud2),1,fptr);
     for(i=0;i<5;i++)
     {
