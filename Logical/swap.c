@@ -11,6 +11,8 @@ int main()
     printf("swap value ");
     printf("a=%d\n",a);
      printf("b=%d",b);
+     return 0;
+     
     
 
 }
