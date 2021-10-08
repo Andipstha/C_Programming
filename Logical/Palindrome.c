@@ -3,7 +3,7 @@
 int main()
 {
     int num,rem,sum=0,temp=0;
-    printf("Enter any intiger: ");
+    printf("Enter any integer: ");
     scanf("%d",&num);
     temp=num;
     while(num>0)
@@ -15,11 +15,11 @@ int main()
     printf("The reverse number is %d\n",sum);
     if(temp==sum)
     {
-        printf("The given number is palindrom.");
+        printf("The given number is palindrome.");
     }
     else
     {
-        printf("The given number is not palindrom");
+        printf("The given number is not palindrome");
     }
     return 0;
 }
