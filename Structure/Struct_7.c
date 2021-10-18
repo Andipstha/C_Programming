@@ -1,16 +1,17 @@
 /* WAP to input 5 employee records (Emp_id, Emp_name and Emp_Salary).
-   Display 3 employee information who gets the highest salary.
+   Display employee information whose name starts with ‘D’.
 */
-#include<stdio.h>
-    struct emp{
-        int emp_id;
-        char emp_name[20];
-        int emp_salary;
-    }e[5];
 
+#include<stdio.h>
+struct emp
+{
+    char emp_name[20];
+    int emp_id;
+    int emp_salary;
+}e[5];
 int main()
 {
-    int i=0,j=0,t=0,a=0;
+    int i=0,j=0,x=0;
     for(i=0;i<5;i++){
         printf("* Enter the details of the %dst employee:\n",i+1);
         printf("# Enter the name of the employee:\n");
@@ -23,19 +24,21 @@ int main()
         scanf("%d",&e[i].emp_salary);
         fflush(stdin);
     }
-    for(i=0;i<5;i++) 
-	{
-		for(j=i+1;j<5;j++) 
-		{
-			if(e[i].emp_salary<e[j].emp_salary)  
-			{
-				t=e[i].emp_salary;
-				e[i].emp_salary=e[j].emp_salary;
-				e[j].emp_salary=t;	
-			}
-		}
+    for(i=0;i<5;i++){
+        if(e[i].emp_name[0]== 'D'){
+            x=1;
+            printf("Name : %s\n",e[i].emp_name);
+            printf("Id : %d\n",e[i].emp_id);
+            printf("Salary : %d\n",e[i].emp_salary);
+        }
+     }
+  
+    if(x!=1){
+		        
+        printf("\n There are no details with the information you searched");
+	        
     }
     return 0;
-}
-   
     
+}
+

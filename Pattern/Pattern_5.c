@@ -2,7 +2,8 @@
        5 4 3 2
        5 4 3
        5 4
-       5*/
+       5
+*/
 #include<stdio.h>
 int main(){
     int i=0,j=0;

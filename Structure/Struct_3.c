@@ -9,12 +9,42 @@ struct students{
         char fact[10];
         char email[30];
         int marks;
-}s[5];
+}s[5],temp;
 int main()
 {
-        int i=0;
-        printf("Enter the details of the students");
+        int i=0,j=0;
+       for(i=0;i<=4;i++){
+        printf("Enter the details of %d students.\n",i+1);
+        printf("Enter the name of the students.\n");
+        fgets(s[i].name,20,stdin);
+        fflush(stdin);
+        
+        printf("Enter the faculty of the students.\n");
+        fgets(s[i].fact,20,stdin);
+        fflush(stdin);
+        
         printf("Enter the email of the students.\n");
-        gets("s[i].email");
-        printf("%s",s[i].email);
+        fgets(s[i].email,20,stdin);
+        fflush(stdin);
+       
+        printf("Enter the marks of the students.\n");
+        scanf("%d",&s[i].marks);
+        fflush(stdin);
+       }
+       for(i=0;i<=4;i++){
+               for(j=0;j<=4;j++){
+                       if(s[j].marks<s[j+1].marks)
+                       {
+                               temp=s[j];
+                               s[j]=s[j+i];
+                               s[j+1]=temp;
+                       }
+               }
+       }
+       printf("The details of the students are as follow:\n");
+       printf("Name:-\tFaculty:-\tEmail ID:-\t\tMarks:-\n");
+       for(i=0;i<=4;i++){
+               printf("%s\t%s\t%s\t\t%d\n",s[i].name,s[i].fact,s[i].email,s[i].marks);
+       }
+
 }
