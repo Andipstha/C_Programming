@@ -8,7 +8,14 @@ int main(){
     }
     printf("The reverse order:\n");
     for(i=4;i>=0;i--){
-        b[i]=a[9-i];
+        b[i]=a[4-i];
     }
-    for()
+    
+    for(i=0;i<=4;i++){
+        a[i]=b[i];
+        printf("%d\n",a[i]);
+    }
+    
+    return 0;
+
 }

@@ -3,7 +3,7 @@
         and display the overall detail of students rank wise with respect to total
         marks.
 */
-#include<stdio.h>
+#include<stdio.h>f
 struct students{
         char name[20];
         char fact[10];
