@@ -1,5 +1,5 @@
 /*1.	Write a program with structure “Students” to contain name, faculty, email,
-        and total marks obtained. Develop a program to read data for 5 students 
+         and total marks obtained. Develop a program to read data for 5 students 
         and display the overall detail of students rank wise with respect to total
         marks.
 */
@@ -36,7 +36,7 @@ int main()
                        if(s[j].marks<s[j+1].marks)
                        {
                                temp=s[j];
-                               s[j]=s[j+i];
+                               s[j]=s[j+1];
                                s[j+1]=temp;
                        }
                }

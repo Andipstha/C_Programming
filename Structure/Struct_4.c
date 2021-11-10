@@ -10,10 +10,10 @@ struct student{
     int math;
     int c;
     int eng;
-}s[3];
+}s[5];
 int main(){
     int i=0;
-    for(i=0;i<3;i++){
+    for(i=0;i<5;i++){
         printf("Enter the details of the %d student:\n",i+1);
         printf("Enter the name of the student:\n");
         fgets(s[i].name,20,stdin);
@@ -31,7 +31,7 @@ int main(){
         scanf("%d",&s[i].eng);
         fflush(stdin);
     }
-        for(i=0;i<3;i++){
+        for(i=0;i<5;i++){
             if(s[i].c>50){
             printf("The details of student who pass the c programming are:\n");
             printf("Name:%s\n",s[i].name);

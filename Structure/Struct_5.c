@@ -5,10 +5,10 @@
 */
 #include<stdio.h>{
     struct time{
-        float hours;
-        float minute;
-        float second;
-    }s[3];
+        int hours;
+        int minute;
+        int second;
+    }s;
     int main(){
         printf("3");
     
