@@ -35,8 +35,8 @@ int main(){
         printf("ID=%d\n",s[i].id);
         printf("salary=%d\n",s[i].salary);
     }
-    for(i=0;i<=4;i++){
-        for(j=0;j<=4;j++){
+    for(i=0;i<=3;i++){
+        for(j=0;j<=3;j++){
             if(s[i].salary<s[j].salary){
             temp=s[i].salary;
             s[i].salary=s[j].salary;
