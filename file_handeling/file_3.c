@@ -44,7 +44,7 @@ int main(){
         }
         }
     }
-    printf("The highest salary paid to the employee is %d",s[4].salary);
+    printf("The highest salary paid to the employee is %d",s[3].salary);
     return 0;
 
 }
