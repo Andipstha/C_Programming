@@ -7,17 +7,19 @@ int main(){
     int i,j,sum;
     printf("Enter the string.\n");
     gets(a);
-    for(i=0;i<=5;i++){
-        b=a[i];
-        printf("%c",b);
-
-    }
-    printf("The string of the lower case is:\n");
-    for(i=0;i<=5;i++){
-         a[i]=a[j];
+    
+	while(a[i]!='\0')
+	{
+		if(a[i]>='a'&&a[i]<='z')
+		a[i]=a[i]-32;
+		i++;
+	}
+	printf("\n the uppercase string is:");
+	puts(a);
+	
          
             
-    }
+    
 }
 
 

@@ -1,5 +1,5 @@
-/*	WAP to enter records in a file with members as id, name and salary. Develop a program to read the file and find out
-    employee highest salary.
+/*	WAP to enter records in a file with members as id, name and salary. 
+    Develop a program to read the file and find out employee highest salary.
 */
 #include<stdio.h>
 struct emp{
@@ -8,7 +8,7 @@ struct emp{
     int salary;
 }s[4];
 int main(){
-    int i,j;
+    int i,j,temp;
     FILE *p;
     p=fopen("employee.txt","w+");
     if(p==NULL){
@@ -16,13 +16,13 @@ int main(){
     }
     for(i=0;i<=3;i++){
         printf("Enter the detail of %d employee.\n",i+1);
-        printf("Enter the name of the students.\n");
+        printf("Enter the name of the employee.\n");
         fgets(s[i].name,20,stdin);
         fflush(stdin);
-        printf("Enter the id of the students.\n");
+        printf("Enter the id of the employee.\n");
         scanf("%d",&s[i].id);
         fflush(stdin);
-        printf("Enter the salary of the students.\n");
+        printf("Enter the salary of the employee.\n");
         scanf("%d",&s[i].salary);
         fflush(stdin);
     }
@@ -35,6 +35,16 @@ int main(){
         printf("ID=%d\n",s[i].id);
         printf("salary=%d\n",s[i].salary);
     }
-
+    for(i=0;i<=3;i++){
+        for(j=0;j<=3;j++){
+            if(s[i].salary<s[j].salary){
+            temp=s[i].salary;
+            s[i].salary=s[j].salary;
+            s[j].salary=temp;
+        }
+        }
+    }
+    printf("The highest salary paid to the employee is %d",s[3].salary);
+    return 0;
 
 }

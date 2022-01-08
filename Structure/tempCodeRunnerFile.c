@@ -1,1 +1,0 @@
-printf("%d\t%s\t%s\t%d\n",s[i].id,s[i].name,s[i].email,s[i].marks);
